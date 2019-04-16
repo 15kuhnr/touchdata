@@ -1,0 +1,47 @@
+=========
+LECTURE 7
+=========
+Jan 31
+
+Fingerprint stuff:
+
+Finished alignment, now you can correspond the minutia!
+Corresponding minutia requires two steps:
+1 - Check the distance between them, if they are within a cerain threshold, then process to 2
+2 - Check the angles of the minutia, and if they are within a certain threshold, they are corresponding.
+
+After they are corresponded, you can begin to measure the distance between them, and then detwrmine a match score
+
+Now we are going to cover algorithms:
+
+Minutia have 4 dimensions: (X position, Y position, Angle, Type)
+
+Gabor filtering is the 'best' way to enhance a fingerprint
+
+Fourier Transform method and Histogram Equalization are other methods that don't work as well
+
+Binarization is done after enhancement, and this just sets the contrast threshold to infinity *basically*
+During Binarization you invert the colors, this helps you with the math later.
+
+After binarization you thin the image, this reduces the fingerprints to single pixel lines
+
+Then you find minutia points, you do this by walking around the outside of the square and count the number of 1-0 transitions. The number of these determines the type of minutia
+
+Then you remove spurious minutia points. There are 7 types of spurious minutia. Scars are considered to be spurious, which is really goddamn annoying to remember.
+
+=========
+LECTURE 9
+=========
+Feb 12, 2019
+Facial Recognition
+
+For 1:1 recognition, accuracy is extremely high, however, for 1:n, the accuracy is lower, obviously.
+Facial Recognition is the easiest to collect
+
+Different feature levels:
+1: Gross features like shape of the face
+2: Structure of face, relationship between components
+3: Unstructured micro features, mole, freckles, pores
+
+
+
